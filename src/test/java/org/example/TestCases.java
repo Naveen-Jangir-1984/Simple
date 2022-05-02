@@ -9,19 +9,16 @@ import org.testng.annotations.Test;
 
 public class TestCases {
   private WebDriver driver;
-  private String url = "https://www.google.com/";
-
+  private final String url = "https://www.google.com/";
   @BeforeTest
   public void OpenChrome() {
     WebDriverManager.chromedriver().setup();
     driver = new ChromeDriver();
   }
-
   @Test
   public void Case_001() {
     driver.get(url);
   }
-
   @AfterTest
   public void CloseBrowser() {
     driver.close();
