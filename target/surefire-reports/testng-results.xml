@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-02T14:13:04 IST" name="org.example.TestCases" finished-at="2022-05-02T14:13:16 IST" duration-ms="12032">
+    <groups>
+    </groups>
+    <test started-at="2022-05-02T14:13:04 IST" name="Command line test" finished-at="2022-05-02T14:13:16 IST" duration-ms="12032">
+      <class name="org.example.TestCases">
+        <test-method is-config="true" signature="OpenChrome()[pri:0, instance:org.example.TestCases@b7f23d9]" started-at="2022-05-02T14:13:04 IST" name="OpenChrome" finished-at="2022-05-02T14:13:12 IST" duration-ms="8593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenChrome -->
+        <test-method signature="Case_001()[pri:0, instance:org.example.TestCases@b7f23d9]" started-at="2022-05-02T14:13:12 IST" name="Case_001" finished-at="2022-05-02T14:13:15 IST" duration-ms="2753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Case_001 -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:org.example.TestCases@b7f23d9]" started-at="2022-05-02T14:13:15 IST" name="CloseBrowser" finished-at="2022-05-02T14:13:16 IST" duration-ms="617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- org.example.TestCases -->
+    </test> <!-- Command line test -->
+  </suite> <!-- org.example.TestCases -->
+</testng-results>
