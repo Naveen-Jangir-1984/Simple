@@ -11,9 +11,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.DriverManager;
-import java.util.concurrent.TimeUnit;
-
 public class SearchStepDefinition {
 
   private WebDriver driver;
@@ -40,8 +37,6 @@ public class SearchStepDefinition {
     assert true;
   }
   @After
-  public void teardown() {
-    driver.quit();
-  }
+  public void teardown() { driver.quit(); }
 
 }
