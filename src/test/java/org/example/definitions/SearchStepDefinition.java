@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.pages.HomePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 public class SearchStepDefinition {
@@ -18,8 +18,9 @@ public class SearchStepDefinition {
 
   @Before
   public void setUp() {
-    WebDriverManager.chromedriver().setup();
-    driver = new ChromeDriver();
+    ChromeOptions capability = new ChromeOptions();
+    capability.setHeadless(true);
+    driver = WebDriverManager.chromedriver().capabilities(capability).create();
     homePage = new HomePage(driver);
   }
   @Given("User is on Google Search page")
