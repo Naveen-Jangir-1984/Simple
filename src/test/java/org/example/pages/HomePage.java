@@ -1,5 +1,6 @@
 package org.example.pages;
 
+import org.example.utility.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +16,7 @@ public class HomePage {
   public void navigateToURL() { this.driver.get(url); }
   public void searchText(String searchTxt) {
     WebElement ele_search = driver.findElement(txt_search);
-    ele_search.clear();
-    ele_search.sendKeys(searchTxt);
+    CommonMethods.enterText(driver, ele_search, searchTxt);
     ele_search.sendKeys(Keys.RETURN);
   }
   public String getResultText() { return driver.findElement(txt_result).getText(); }
