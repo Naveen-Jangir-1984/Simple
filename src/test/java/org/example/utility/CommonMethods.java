@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class CommonMethods {
-  private static Duration globalWaitTime = Duration.ofSeconds(5);
+  private final static Duration globalWaitTime = Duration.ofSeconds(5);
   public static void enterText(WebDriver driver, WebElement element, String text) {
     waitForElement(driver, element);
     element.clear();
