@@ -8,18 +8,18 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
-  WebDriver driver;
+  private final WebDriver browser;
   By txt_search = By.name("q");
   By txt_result = By.cssSelector("#extabar #result-stats");
-  public HomePage(WebDriver driver) { this.driver = driver; }
+  public HomePage(WebDriver browser) { this.browser = browser; }
   public void navigateToURL() {
     String url = "https://www.google.com/";
-    this.driver.get(url);
+    this.browser.get(url);
   }
   public void searchText(String searchTxt) {
-    WebElement ele_search = driver.findElement(txt_search);
-    CommonMethods.enterText(driver, ele_search, searchTxt);
+    WebElement ele_search = browser.findElement(txt_search);
+    CommonMethods.enterText(browser, ele_search, searchTxt);
     ele_search.sendKeys(Keys.RETURN);
   }
-  public String getResultText() { return driver.findElement(txt_result).getText(); }
+  public String getResultText() { return browser.findElement(txt_result).getText(); }
 }
