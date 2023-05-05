@@ -9,14 +9,14 @@ import java.time.Duration;
 
 public class CommonMethods {
   private final static Duration globalWaitTime = Duration.ofSeconds(5);
-  public static void enterText(WebDriver driver, WebElement element, String text) {
-    waitForElement(driver, element);
+  public static void enterText(WebDriver browser, WebElement element, String text) {
+    waitForElement(browser, element);
     element.clear();
     element.sendKeys(text);
   }
 
-  public static void waitForElement(WebDriver driver, WebElement element) {
-    WebDriverWait wait = new WebDriverWait(driver, globalWaitTime);
+  public static void waitForElement(WebDriver browser, WebElement element) {
+    WebDriverWait wait = new WebDriverWait(browser, globalWaitTime);
     wait.until(ExpectedConditions.visibilityOf(element));
   }
 }
