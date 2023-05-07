@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
-  private final WebDriver browser;
+  protected WebDriver browser;
   By txt_search = By.name("q");
   By txt_result = By.cssSelector("#extabar #result-stats");
   public HomePage(WebDriver browser) { this.browser = browser; }
