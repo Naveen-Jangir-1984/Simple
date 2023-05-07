@@ -11,7 +11,7 @@ public class SearchStepDefinition {
   private HomePage homePage;
   @Given("User is on Google Search page")
   public void user_is_on_google_search_page() {
-    homePage = new HomePage(ManageBrowser.getBrowser());
+    homePage = new HomePage(ManageBrowser.browser);
     homePage.navigateToURL();
   }
   @When("User searches text as {string}")

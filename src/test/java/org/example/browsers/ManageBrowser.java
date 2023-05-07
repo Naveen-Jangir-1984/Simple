@@ -5,14 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ManageBrowser {
-  private static WebDriver browser;
-  public static void setUpBrowser() {
+  public static WebDriver browser;
+  public void setUpBrowser() {
     ChromeOptions capability = new ChromeOptions();
-    capability.setHeadless(false);
+    capability.setHeadless(true);
     browser = WebDriverManager.chromedriver().capabilities(capability).create();
   }
-  public static WebDriver getBrowser() {
-    return browser;
-  }
-  public static void tearDownBrowser() { browser.quit(); }
+  public void tearDownBrowser() { browser.quit(); }
 }
